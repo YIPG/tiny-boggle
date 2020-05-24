@@ -1,4 +1,6 @@
-@import './button.css';
+@import "./button.css";
+@import "./dice.css";
+@import "./word.css";
 
 @tailwind base;
 @tailwind components;

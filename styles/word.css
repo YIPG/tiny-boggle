@@ -1,0 +1,19 @@
+.word {
+  @apply h-16 font-bold text-2xl pt-5 pb-1 mb-2 border-b-2 border-gray-300 cursor-not-allowed;
+}
+
+.word-text {
+  @apply text-gray-700;
+}
+
+.word-placeholder {
+  @apply text-gray-200;
+}
+
+.word-incorrect {
+  @apply border-red-300;
+}
+
+.word-correct {
+  @apply border-green-300;
+}

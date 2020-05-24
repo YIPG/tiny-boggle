@@ -1,0 +1,11 @@
+.dice {
+  @apply bg-gray-100 rounded-lg border-2 border-blue-200 flex justify-center items-center cursor-default select-none;
+}
+
+.dice-text {
+  @apply text-3xl font-sans font-bold text-blue-700;
+}
+
+.dice-active {
+  @apply border-orange-200 text-orange-700 bg-gray-200;
+}
