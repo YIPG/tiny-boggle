@@ -16,5 +16,6 @@ allWords.forEach((word) => {
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const word: string = req.body
   const ok = trie.contain(word)
+  console.log(ok)
   res.send(ok ? word : "0")
 }
