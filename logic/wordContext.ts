@@ -52,7 +52,7 @@ export function useWordSetting() {
 
   const fetchIsValid = async () => {
     const { word } = wordSetting
-    const res = await fetch("/api/word", {
+    const res = await fetch("https://pacific-woodland-07437.herokuapp.com/", {
       method: "POST",
       body: word.toLowerCase(),
     })
@@ -61,7 +61,7 @@ export function useWordSetting() {
     setWordSetting((prev) => {
       return {
         ...prev,
-        isValid: text == word.toLowerCase() ? "valid" : "inValid",
+        isValid: text == "true" ? "valid" : "inValid",
       }
     })
   }
