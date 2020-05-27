@@ -7,10 +7,9 @@ import { Trie } from "../../utils/trie"
 
 const { serverRuntimeConfig } = getConfig()
 
-//
 const dictionaryPath = path.join(
   serverRuntimeConfig.PROJECT_ROOT,
-  "./assets/dictionary.json"
+  "./public/dictionary.json"
 )
 
 const fileName = fs.readFileSync(dictionaryPath, "utf-8")
