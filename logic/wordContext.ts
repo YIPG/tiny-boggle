@@ -52,7 +52,7 @@ export function useWordSetting() {
 
   const fetchIsValid = async () => {
     const { word } = wordSetting
-    const res = await fetch("https://pacific-woodland-07437.herokuapp.com/", {
+    const res = await fetch("https://boggle-solver-api.herokuapp.com/", {
       method: "POST",
       body: word.toLowerCase(),
     })
