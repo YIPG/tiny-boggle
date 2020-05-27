@@ -58,7 +58,6 @@ export function useWordSetting() {
     })
 
     const text: string = await res.text()
-    console.log(text)
     setWordSetting((prev) => {
       return {
         ...prev,
