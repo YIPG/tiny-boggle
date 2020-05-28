@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import Header from "../components/header"
 import Nav from "../components/nav"
 import Board from "../components/board"
 import Word from "../components/word"
@@ -21,6 +22,13 @@ export default function IndexPage({ chars }: { chars: string[] }) {
   }, [])
   return (
     <>
+      <Header
+        title="Boggle"
+        keyword="Boggle"
+        description="Tiny 60kb Boggle"
+        image="/share.png"
+        url="https://boggle.yuyaito.dev/"
+      />
       <Nav />
       <div className="flex justify-center">
         <Word />
