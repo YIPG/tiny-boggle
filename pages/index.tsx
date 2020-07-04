@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Header from "../components/header"
 import Nav from "../components/nav"
 import Board from "../components/board"
@@ -7,18 +7,12 @@ import { AnswerButton } from "../components/answerButton"
 import { useBoardSettingCtx } from "../logic/boardContext"
 import { getChars } from "../utils/getChars"
 
-export async function getStaticProps() {
-  const chars = getChars()
-  return {
-    props: {
-      chars,
-    },
-  }
-}
-
-export default function IndexPage({ chars }: { chars: string[] }) {
+export default function IndexPage() {
   const { initBoard } = useBoardSettingCtx()
+  const [chars, setChars] = useState<string[]>(new Array(16).fill(""))
   useEffect(() => {
+    const chars = getChars()
+    setChars(chars)
     initBoard(chars)
   }, [])
 
