@@ -14,7 +14,10 @@ export const AnswerButton = ({
   chars: string[]
 }) => {
   const [ans, setAns] = useState<Ans | null>()
+  const [loading, setLoading] = useState(false)
+
   const onClick = async () => {
+    setLoading(true)
     const res = await fetch("/api/time", {
       method: "POST",
       body: JSON.stringify({
@@ -24,6 +27,7 @@ export const AnswerButton = ({
     })
 
     setAns(await res.json())
+    setLoading(false)
   }
   return (
     <div className="flex flex-col items-center w-64 h-76">
@@ -31,6 +35,11 @@ export const AnswerButton = ({
         className="btn-blue text-base w-2/3"
         onClick={onClick}
       >{`${solverType} solver`}</button>
+      {true && (
+        <div className="loader border-2 border-solid border-blue-300 my-auto">
+          <div />
+        </div>
+      )}
       {ans && (
         <div className="my-5 text-gray-800 font-sans text-base leading-loose">
           <p>

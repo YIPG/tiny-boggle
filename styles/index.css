@@ -1,6 +1,7 @@
 @import "./button.css";
 @import "./dice.css";
 @import "./word.css";
+@import "./loader.css";
 
 @tailwind base;
 @tailwind components;
