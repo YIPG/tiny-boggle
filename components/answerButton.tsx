@@ -35,7 +35,7 @@ export const AnswerButton = ({
         className="btn-blue text-base w-2/3"
         onClick={onClick}
       >{`${solverType} solver`}</button>
-      {loading && (
+      {!ans && loading && (
         <div className="loader border-2 border-solid border-blue-300 my-auto">
           <div />
         </div>
