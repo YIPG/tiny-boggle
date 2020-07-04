@@ -41,7 +41,7 @@ export const AnswerButton = ({
         </div>
       )}
       {ans && (
-        <div className="my-5 text-gray-800 font-sans text-base leading-loose">
+        <div className="my-5 text-gray-800 font-sans text-base leading-loose result">
           <p>
             Possible answers are{" "}
             <span className="font-semibold">{ans.words.length}</span>.

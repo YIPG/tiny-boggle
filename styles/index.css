@@ -2,6 +2,7 @@
 @import "./dice.css";
 @import "./word.css";
 @import "./loader.css";
+@import "./result.css";
 
 @tailwind base;
 @tailwind components;
