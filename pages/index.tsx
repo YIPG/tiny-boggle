@@ -3,6 +3,7 @@ import Header from "../components/header"
 import Nav from "../components/nav"
 import Board from "../components/board"
 import Word from "../components/word"
+import { AnswerButton } from "../components/answerButton"
 import { useBoardSettingCtx } from "../logic/boardContext"
 import { getChars } from "../utils/getChars"
 
@@ -20,6 +21,7 @@ export default function IndexPage({ chars }: { chars: string[] }) {
   useEffect(() => {
     initBoard(chars)
   }, [])
+
   return (
     <>
       <Header
@@ -36,6 +38,11 @@ export default function IndexPage({ chars }: { chars: string[] }) {
 
       <div className="mt-6 flex justify-center">
         <Board />
+      </div>
+
+      <div className="my-10 flex flex-col items-center">
+        <AnswerButton solverType="trie" chars={chars} />
+        <AnswerButton solverType="bluteforce" chars={chars} />
       </div>
     </>
   )
