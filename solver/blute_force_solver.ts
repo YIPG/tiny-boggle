@@ -1,7 +1,7 @@
 import { split } from "../utils/split"
 import { Performance } from "perf_hooks"
 
-export const bluteForceSolver = (
+export const bruteforceSolver = (
   words: string[],
   chars: string[],
   performance?: Performance

@@ -1,4 +1,4 @@
-import { bluteForceSolver } from "./blute_force_solver"
+import { bruteforceSolver } from "./blute_force_solver"
 import { trieSolver } from "./trie_solver"
 import { promises as fs } from "fs"
 import path from "path"
@@ -29,7 +29,7 @@ describe("Solver Test", () => {
   })
 
   test("Blute Force Solver returns collect answer", () => {
-    const ans = bluteForceSolver(dictionary, chars)
+    const ans = bruteforceSolver(dictionary, chars)
     expect(ans.length).toBe(28)
   })
 

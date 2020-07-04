@@ -7,7 +7,7 @@ interface Ans {
 }
 
 export const AnswerButton = ({
-  solverType = "bluteForce",
+  solverType = "bruteforce",
   chars,
 }: {
   solverType?: string

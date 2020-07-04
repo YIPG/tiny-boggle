@@ -42,7 +42,7 @@ export default function IndexPage({ chars }: { chars: string[] }) {
 
       <div className="my-10 flex flex-col items-center">
         <AnswerButton solverType="trie" chars={chars} />
-        <AnswerButton solverType="bluteforce" chars={chars} />
+        <AnswerButton solverType="bruteforce" chars={chars} />
       </div>
     </>
   )

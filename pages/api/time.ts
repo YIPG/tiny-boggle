@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 
-import { bluteForceSolver } from "../../solver/blute_force_solver"
+import { bruteforceSolver } from "../../solver/blute_force_solver"
 import { trieSolver } from "../../solver/trie_solver"
 
 import fs from "fs"
@@ -15,7 +15,7 @@ const dictionary: string[] = JSON.parse(fileName)
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body)
   const solverType: string = body.solver
-  if (!["trie", "bluteforce"].includes(solverType)) {
+  if (!["trie", "bruteforce"].includes(solverType)) {
     res.status(400).send("invalid solver type🚫")
     return
   }
@@ -41,7 +41,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   const words =
     solverType === "trie"
       ? trieSolver(dictionary, chars, performance)
-      : bluteForceSolver(dictionary, chars, performance)
+      : bruteforceSolver(dictionary, chars, performance)
 
   res.json({
     words,
