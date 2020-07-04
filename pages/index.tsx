@@ -25,9 +25,9 @@ export default function IndexPage({ chars }: { chars: string[] }) {
   return (
     <>
       <Header
-        title="Boggle"
+        title="Tiny Boggle 🎲"
         keyword="Boggle"
-        description="Tiny 60kb Boggle"
+        description="Tiny 60kb Boggle built with Next.js. Enjoy playing! 🚀"
         image="/share.png"
         url="https://boggle.yuyaito.dev/"
       />
