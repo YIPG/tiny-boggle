@@ -2,7 +2,7 @@
 
 This is the tiny **60kb** [Boggle🎲](https://en.wikipedia.org/wiki/Boggle) based on `Next.js`.
 
-The logic of showing possible answers uses [Trie](https://en.wikipedia.org/wiki/Trie) and Brute force DFS.
+The logic of showing possible answers uses [Trie](https://en.wikipedia.org/wiki/Trie), brute force DFS.
 
 |Branch Name|master|feat|
 |-|-|-|
